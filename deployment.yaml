@@ -10,7 +10,7 @@ spec:
       app: hello
       tier: frontend
       track: stable
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -23,6 +23,9 @@ spec:
           image: "gcr.io/my-project-terraform-329615/hello-app:4.0"
         - name: nginx
           image: nginx:latest
+          ports:
+          - containerPort: 80
+            name: nginx
           lifecycle:
             preStop:
               exec:
