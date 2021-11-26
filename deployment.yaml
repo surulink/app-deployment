@@ -21,11 +21,6 @@ spec:
       containers:
         - name: hello
           image: "gcr.io/my-project-terraform-329615/hello-app:4.0"
-        - name: nginx
-          image: nginx:latest
-          ports:
-          - containerPort: 80
-            name: nginx
           lifecycle:
             preStop:
               exec:
