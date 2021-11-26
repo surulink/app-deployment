@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: "gcr.io/my-project-terraform-329615/hello-frontend:1.0"
+          image: "gcr.io/my-project-terraform-329615/hello-app:4.0"
         - name: nginx
           image: nginx:latest
           lifecycle:
